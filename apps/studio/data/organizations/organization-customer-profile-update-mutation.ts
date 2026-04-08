@@ -77,7 +77,7 @@ export const useOrganizationCustomerProfileUpdateMutation = ({
           return {
             ...prev,
             billing_name,
-            address,
+            ...(address !== undefined ? { address } : {}),
           }
         }
       )
